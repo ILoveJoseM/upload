@@ -15,21 +15,6 @@ use Logic\UploadLogic;
 class AdminCommonController extends BaseController
 {
     /**
-     * @name 管理系统登录
-     * @apiParam name|string|账号|true
-     * @apiParam pass|string|密码|true
-     * @param ServerRequest $request
-     * @return \Service\ApiResponse
-     */
-    public function login(ServerRequest $request)
-    {
-        $name = $request->getParam("name");
-        $pass = $request->getParam("pass");
-
-        return $this->response(AdminCommonLogic::getInstance()->login($name,$pass));
-    }
-
-    /**
      * @name 上传图片
      * @apiParam upload|file|文件|true
      * @param ServerRequest $request
