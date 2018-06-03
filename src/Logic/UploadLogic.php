@@ -22,7 +22,7 @@ class UploadLogic extends BaseLogic
             "image/bmp"
         ]);
 
-        $path = "https://a.ym8800.com".app()->get("config")->get("upload_dir")."/".$file->getName().".".$file->getExtension();
+        $path = app()->get("config")->get("upload_domain").app()->get("config")->get("upload_dir")."/".$file->getName().".".$file->getExtension();
 
         $data = [
             "resource_id" => $file->getName(),
@@ -41,7 +41,7 @@ class UploadLogic extends BaseLogic
     {
         $file = Uploader::save($name,["video/mpeg","video/mp4"]);
 
-        $path = "https://a.ym8800.com".app()->get("config")->get("upload_dir")."/".$file->getName().".".$file->getExtension();
+        $path = app()->get("config")->get("upload_domain").app()->get("config")->get("upload_dir")."/".$file->getName().".".$file->getExtension();
 
         $data = [
             "resource_id" => $file->getName(),
