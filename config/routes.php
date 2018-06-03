@@ -22,6 +22,6 @@
 //});
 
 route()->group(['prefix' => '/upload', 'middleware' => 'dispatch'],function(){
-    route()->post("/image","CommonController@uploadImage");
-    route()->post("/video","CommonController@uploadVideo");
+    route()->post("/image","AdminCommonController@uploadImage");
+    route()->post("/video","AdminCommonController@uploadVideo");
 });
